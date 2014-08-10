@@ -1,6 +1,6 @@
-# Docker Deluge
+# Docker Deluge 
 
-Docker container for runing a [Deluge](http://deluge-torrent.org/) daemon and web GUI.
+Docker container for running a [Deluge](http://deluge-torrent.org/) daemon and web GUI.
 
 ## Building 
 
@@ -30,7 +30,7 @@ This might not be desirable for every use case.
 
 The default password of deluge is not really secure. 
 The intended usage is to only expose the web port to localhost, 
-so that only people who have shell access to the host machine can SSH forward the relevent port to their local machine
+so that only people who have shell access to the host machine can SSH forward the relevant port to their local machine
 
 ```sh
 $ docker run -d --name deluge -v /torrents:/torrents -u 1000 -p 127.0.0.1:8112:8112 nightfly/deluge
