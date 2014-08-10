@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+if ! [ -d /torrents/.state ];then
+  mkdir /torrents/.state;
+fi
+
+/usr/bin/deluged -c /config
+exec /usr/bin/deluge-web -c /config
